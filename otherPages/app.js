@@ -28,7 +28,7 @@ document.getElementById("registerForm")?.addEventListener("submit", function (ev
     localStorage.setItem("users", JSON.stringify(users)); // Save updated users list
     event.target.reset();
     alert("Registration successful!"); 
-    window.location.href = "../login.html"; // Redirect to login page
+    window.location.href = "../index.html"; // Redirect to login page
     
 });
 
