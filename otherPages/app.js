@@ -1,5 +1,12 @@
 
 // Registration Logic
+window.onload = function(){
+    if (localStorage.getItem("isLoggedIn") === "true"){
+
+        window.location.href = "home.html";
+    }
+
+}
 document.getElementById("registerForm")?.addEventListener("submit", function (event) {
     event.preventDefault();
 
