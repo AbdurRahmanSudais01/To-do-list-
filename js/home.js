@@ -1,6 +1,7 @@
 // home Page
 window.onload = function(){
-    if (localStorage.getItem("isLoggedIn") !== "true"){
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (!loggedInUser){
 
         window.location.href = "../index.html";
     }
@@ -8,7 +9,7 @@ window.onload = function(){
 }
     let user = JSON.parse(localStorage.getItem("loggedInUser"));
     
-    const userName = user.user_Email;
+    const userName = user.user_fullName;
 
     document.getElementById("user_Name").innerHTML = `${userName}`;
     document.getElementById("offcanvasDarkNavbarLabel").innerHTML = `${userName}`;
@@ -23,9 +24,9 @@ window.onload = function(){
         listItem.className = "listItem";
 
         listItem.innerHTML = `
-        <img src="check.png" alt="">
+        <img src="../images/check.png" alt="">
         <p>${inp}</p>
-        <img src="delete (1).png" alt="" onclick="this.parentElement.remove()">
+        <img src="../images/delete (1).png" alt="" onclick="this.parentElement.remove()">
         `
         document.getElementById("list").appendChild(listItem);
 
