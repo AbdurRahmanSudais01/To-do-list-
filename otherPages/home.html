@@ -35,10 +35,10 @@
       <div id="body">
         <p class="h1" id="mianText">Hello! <span id="user_Name"></span></p>
         <p class="h3">Welcome to the page!</p>
-        <div id="section">
-          <form class="row g-3" id="toDoInput">
+        <div id="section" >
+          <form id="toDoInput">
           <div class="d-flex div">
-            <input type="text" class="form-control" id="inputText" placeholder="Enter text" name="input" required>
+            <input type="text" class="form-control" id="inputText" placeholder="Write your tasks here!" name="input" required minlength="8">
           </div>
           <div class="col-auto">
             <button type="submit" class="btn btn-primary ">Add</button>
@@ -46,8 +46,7 @@
         </form>
       </div>
     </div>
-    <div id="list">
-    </div>
+    
     
     <script src="../js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>

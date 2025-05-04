@@ -10,13 +10,13 @@
   <form action="" id="registerForm">
     <h1>Register Now</h1>
     <label for="fullName">Full Name:</label>
-    <input type="text" id="fullName" name="fullName" required>
+    <input type="text" id="fullName" name="fullName" required minlength="5">
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" required minlength="8">
 
     <input type="submit" name="submit" id="submit" value="Register">
   </form>
