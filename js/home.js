@@ -29,7 +29,7 @@ window.onload = function(){
              <img src="../images/delete (1).png" alt="" class="delete_todo">
              </div>`
              
-            }else{
+            }else if(item.iscompleted === false){
             
             li = `<div class = "listItem" id="${item.id}">
                          <img src="../images/check.png" alt="" class="check">
@@ -142,11 +142,11 @@ document.getElementById("toDoInput").addEventListener("submit", function(event){
                 let todos = JSON.parse(localStorage.getItem("todos")) || [];
                 todos = todos.map(item => {
                         if (item.id == idtoEdit){
-                              return {...item, todo:  newvalue};
+                              return {...item, todo:  newvalue, iscompleted: false};
                             }
                             return item;
                         })
-                        
+                        p.classList.remove("line_through")
                         p.innerHTML = newvalue;
                         Edit_btn.style.display = "inline";
                         save_btn.style.display = "none";
